@@ -1,0 +1,8 @@
+data/xsum-summarizer/*
+data/xsum-summarizer-no-500/*
+data/xsum-lang/*
+data/xsum-lang-full/*
+data/bbc-summary-data/*
+checkpoints/*
+__pycache__/
+src/hyperparameter_search/__pycache__/*
