@@ -1,0 +1,35 @@
+Sender: LSF System <lsfadmin@eu-g3-035>
+Subject: Job 216179757: <lambda_search_11_ref_full> in cluster <euler> Done
+
+Job <lambda_search_11_ref_full> was submitted from host <eu-login-17> by user <lvander> in cluster <euler> at Thu Apr 28 11:10:50 2022
+Job was executed on host(s) <4*eu-g3-035>, in queue <gpu.24h>, as user <lvander> in cluster <euler> at Thu Apr 28 11:11:01 2022
+</cluster/home/lvander> was used as the home directory.
+</cluster/work/cotterell/liam/master-thesis> was used as the working directory.
+Started at Thu Apr 28 11:11:01 2022
+Terminated at Thu Apr 28 11:33:11 2022
+Results reported at Thu Apr 28 11:33:11 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mkdir -p logs/hallucination_labelling/11_ref_full/; src/hallucination_labelling/generate.sh -s 11 lang_full 0.00097656; src/hallucination_labelling/generate.sh -s 11 lang_full 0.0019531; src/hallucination_labelling/generate.sh -s 11 lang_full 0.0039062; src/hallucination_labelling/generate.sh -s 11 lang_full 0.0078125; src/hallucination_labelling/generate.sh -s 11 lang_full 0.015625; src/hallucination_labelling/generate.sh -s 11 lang_full 0.03125; src/hallucination_labelling/generate.sh -s 11 lang_full 0.0625; src/hallucination_labelling/generate.sh -s 11 lang_full 0.125; src/hallucination_labelling/generate.sh -s 11 lang_full 0.25; src/hallucination_labelling/generate.sh -s 11 lang_full 0.5; 
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1201.24 sec.
+    Max Memory :                                 6129 MB
+    Average Memory :                             5073.98 MB
+    Total Requested Memory :                     8192.00 MB
+    Delta Memory :                               2063.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                14
+    Run time :                                   1329 sec.
+    Turnaround time :                            1341 sec.
+
+The output (if any) follows:
+

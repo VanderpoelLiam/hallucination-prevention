@@ -1,0 +1,16 @@
+Preparing documents... 0 line(s) ignored
+Running ROUGE...
+---------------------------------------------
+1 ROUGE-1 Average_R: 0.18308 (95%-conf.int. 0.18131 - 0.18476)
+1 ROUGE-1 Average_P: 0.18242 (95%-conf.int. 0.18070 - 0.18434)
+1 ROUGE-1 Average_F: 0.17913 (95%-conf.int. 0.17757 - 0.18081)
+---------------------------------------------
+1 ROUGE-2 Average_R: 0.02612 (95%-conf.int. 0.02519 - 0.02701)
+1 ROUGE-2 Average_P: 0.02663 (95%-conf.int. 0.02571 - 0.02748)
+1 ROUGE-2 Average_F: 0.02586 (95%-conf.int. 0.02496 - 0.02671)
+---------------------------------------------
+1 ROUGE-L Average_R: 0.14755 (95%-conf.int. 0.14608 - 0.14901)
+1 ROUGE-L Average_P: 0.14593 (95%-conf.int. 0.14443 - 0.14741)
+1 ROUGE-L Average_F: 0.14377 (95%-conf.int. 0.14237 - 0.14517)
+
+Elapsed time: 172.525 seconds

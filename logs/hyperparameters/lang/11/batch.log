@@ -1,0 +1,341 @@
+Sender: LSF System <lsfadmin@eu-g3-020>
+Subject: Job 211322410: <lambda_search_11> in cluster <euler> Done
+
+Job <lambda_search_11> was submitted from host <eu-login-30> by user <lvander> in cluster <euler> at Sun Mar 27 12:39:53 2022
+Job was executed on host(s) <4*eu-g3-020>, in queue <gpu.24h>, as user <lvander> in cluster <euler> at Sun Mar 27 12:40:23 2022
+</cluster/home/lvander> was used as the home directory.
+</cluster/work/cotterell/liam/master-thesis> was used as the working directory.
+Started at Sun Mar 27 12:40:23 2022
+Terminated at Sun Mar 27 16:13:44 2022
+Results reported at Sun Mar 27 16:13:44 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python src/hyperparameter_search/lambda_gridsearch.py 11 lang logs/hyperparameters/lang/11/
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   12241.02 sec.
+    Max Memory :                                 4817 MB
+    Average Memory :                             3540.98 MB
+    Total Requested Memory :                     8192.00 MB
+    Delta Memory :                               3375.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                15
+    Run time :                                   12800 sec.
+    Turnaround time :                            12831 sec.
+
+The output (if any) follows:
+
+Sender: LSF System <lsfadmin@eu-g1-031-2>
+Subject: Job 211409755: <postprocess_lambda_11> in cluster <euler> Done
+
+Job <postprocess_lambda_11> was submitted from host <eu-login-37> by user <lvander> in cluster <euler> at Mon Mar 28 00:19:07 2022
+Job was executed on host(s) <4*eu-g1-031-2>, in queue <normal.4h>, as user <lvander> in cluster <euler> at Mon Mar 28 00:19:33 2022
+</cluster/home/lvander> was used as the home directory.
+</cluster/work/cotterell/liam/master-thesis> was used as the working directory.
+Started at Mon Mar 28 00:19:33 2022
+Terminated at Mon Mar 28 00:33:48 2022
+Results reported at Mon Mar 28 00:33:48 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python src/hyperparameter_search/postprocess_lambda_gridsearch.py logs/hyperparameters/lang/11/
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   837.94 sec.
+    Max Memory :                                 1131 MB
+    Average Memory :                             795.71 MB
+    Total Requested Memory :                     8192.00 MB
+    Delta Memory :                               7061.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                6
+    Run time :                                   873 sec.
+    Turnaround time :                            881 sec.
+
+The output (if any) follows:
+
+1534
+32377661
+32379821
+32375255
+32374085
+32373393
+32355386
+32345262
+32332499
+32419931
+41405655
+Extracting target and hypothesis summaries ...
+Removing BPE ...
+Removing tokenization ...
+Running files2rouge ...
+Can't locate XML/Parser.pm in @INC (@INC contains: /cluster/home/lvander/.files2rouge /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 41.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 70.
+Compilation failed in require at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+Traceback (most recent call last):
+  File "/cluster/work/cotterell/liam/fair_env/bin/files2rouge", line 11, in <module>
+    load_entry_point('files2rouge==2.1.0', 'console_scripts', 'files2rouge')()
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 131, in main
+    run(args.summary,
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 92, in run
+    output = r.convert_and_evaluate(rouge_args=rouge_args_str)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 368, in convert_and_evaluate
+    rouge_output = self.evaluate(system_id, rouge_args)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 343, in evaluate
+    rouge_output = check_output(command, env=env).decode("UTF-8")
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl', '-e', '/cluster/home/lvander/.files2rouge/data', '-c', '95', '-r', '1000', '-n', '2', '-a', '-m', '/scratch/211409755.tmpdir/tmpu4p2px_u/rouge_conf.xml']' returned non-zero exit status 2.
+ROUGE scores: 
+Extracting target and hypothesis summaries ...
+Removing BPE ...
+Removing tokenization ...
+Running files2rouge ...
+Can't locate XML/Parser.pm in @INC (@INC contains: /cluster/home/lvander/.files2rouge /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 41.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 70.
+Compilation failed in require at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+Traceback (most recent call last):
+  File "/cluster/work/cotterell/liam/fair_env/bin/files2rouge", line 11, in <module>
+    load_entry_point('files2rouge==2.1.0', 'console_scripts', 'files2rouge')()
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 131, in main
+    run(args.summary,
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 92, in run
+    output = r.convert_and_evaluate(rouge_args=rouge_args_str)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 368, in convert_and_evaluate
+    rouge_output = self.evaluate(system_id, rouge_args)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 343, in evaluate
+    rouge_output = check_output(command, env=env).decode("UTF-8")
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl', '-e', '/cluster/home/lvander/.files2rouge/data', '-c', '95', '-r', '1000', '-n', '2', '-a', '-m', '/scratch/211409755.tmpdir/tmpj0wvbdb2/rouge_conf.xml']' returned non-zero exit status 2.
+ROUGE scores: 
+Extracting target and hypothesis summaries ...
+Removing BPE ...
+Removing tokenization ...
+Running files2rouge ...
+Can't locate XML/Parser.pm in @INC (@INC contains: /cluster/home/lvander/.files2rouge /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 41.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 70.
+Compilation failed in require at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+Traceback (most recent call last):
+  File "/cluster/work/cotterell/liam/fair_env/bin/files2rouge", line 11, in <module>
+    load_entry_point('files2rouge==2.1.0', 'console_scripts', 'files2rouge')()
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 131, in main
+    run(args.summary,
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 92, in run
+    output = r.convert_and_evaluate(rouge_args=rouge_args_str)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 368, in convert_and_evaluate
+    rouge_output = self.evaluate(system_id, rouge_args)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 343, in evaluate
+    rouge_output = check_output(command, env=env).decode("UTF-8")
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl', '-e', '/cluster/home/lvander/.files2rouge/data', '-c', '95', '-r', '1000', '-n', '2', '-a', '-m', '/scratch/211409755.tmpdir/tmp94lwqd5k/rouge_conf.xml']' returned non-zero exit status 2.
+ROUGE scores: 
+Extracting target and hypothesis summaries ...
+Removing BPE ...
+Removing tokenization ...
+Running files2rouge ...
+Can't locate XML/Parser.pm in @INC (@INC contains: /cluster/home/lvander/.files2rouge /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 41.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 70.
+Compilation failed in require at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+Traceback (most recent call last):
+  File "/cluster/work/cotterell/liam/fair_env/bin/files2rouge", line 11, in <module>
+    load_entry_point('files2rouge==2.1.0', 'console_scripts', 'files2rouge')()
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 131, in main
+    run(args.summary,
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 92, in run
+    output = r.convert_and_evaluate(rouge_args=rouge_args_str)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 368, in convert_and_evaluate
+    rouge_output = self.evaluate(system_id, rouge_args)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 343, in evaluate
+    rouge_output = check_output(command, env=env).decode("UTF-8")
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl', '-e', '/cluster/home/lvander/.files2rouge/data', '-c', '95', '-r', '1000', '-n', '2', '-a', '-m', '/scratch/211409755.tmpdir/tmpnltc22dd/rouge_conf.xml']' returned non-zero exit status 2.
+ROUGE scores: 
+Extracting target and hypothesis summaries ...
+Removing BPE ...
+Removing tokenization ...
+Running files2rouge ...
+Can't locate XML/Parser.pm in @INC (@INC contains: /cluster/home/lvander/.files2rouge /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 41.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 70.
+Compilation failed in require at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+Traceback (most recent call last):
+  File "/cluster/work/cotterell/liam/fair_env/bin/files2rouge", line 11, in <module>
+    load_entry_point('files2rouge==2.1.0', 'console_scripts', 'files2rouge')()
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 131, in main
+    run(args.summary,
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 92, in run
+    output = r.convert_and_evaluate(rouge_args=rouge_args_str)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 368, in convert_and_evaluate
+    rouge_output = self.evaluate(system_id, rouge_args)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 343, in evaluate
+    rouge_output = check_output(command, env=env).decode("UTF-8")
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl', '-e', '/cluster/home/lvander/.files2rouge/data', '-c', '95', '-r', '1000', '-n', '2', '-a', '-m', '/scratch/211409755.tmpdir/tmpu3lzvn9t/rouge_conf.xml']' returned non-zero exit status 2.
+ROUGE scores: 
+Extracting target and hypothesis summaries ...
+Removing BPE ...
+Removing tokenization ...
+Running files2rouge ...
+Can't locate XML/Parser.pm in @INC (@INC contains: /cluster/home/lvander/.files2rouge /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 41.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 70.
+Compilation failed in require at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+Traceback (most recent call last):
+  File "/cluster/work/cotterell/liam/fair_env/bin/files2rouge", line 11, in <module>
+    load_entry_point('files2rouge==2.1.0', 'console_scripts', 'files2rouge')()
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 131, in main
+    run(args.summary,
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 92, in run
+    output = r.convert_and_evaluate(rouge_args=rouge_args_str)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 368, in convert_and_evaluate
+    rouge_output = self.evaluate(system_id, rouge_args)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 343, in evaluate
+    rouge_output = check_output(command, env=env).decode("UTF-8")
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl', '-e', '/cluster/home/lvander/.files2rouge/data', '-c', '95', '-r', '1000', '-n', '2', '-a', '-m', '/scratch/211409755.tmpdir/tmptjywvysv/rouge_conf.xml']' returned non-zero exit status 2.
+ROUGE scores: 
+Extracting target and hypothesis summaries ...
+Removing BPE ...
+Removing tokenization ...
+Running files2rouge ...
+Can't locate XML/Parser.pm in @INC (@INC contains: /cluster/home/lvander/.files2rouge /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 41.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 70.
+Compilation failed in require at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+Traceback (most recent call last):
+  File "/cluster/work/cotterell/liam/fair_env/bin/files2rouge", line 11, in <module>
+    load_entry_point('files2rouge==2.1.0', 'console_scripts', 'files2rouge')()
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 131, in main
+    run(args.summary,
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 92, in run
+    output = r.convert_and_evaluate(rouge_args=rouge_args_str)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 368, in convert_and_evaluate
+    rouge_output = self.evaluate(system_id, rouge_args)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 343, in evaluate
+    rouge_output = check_output(command, env=env).decode("UTF-8")
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl', '-e', '/cluster/home/lvander/.files2rouge/data', '-c', '95', '-r', '1000', '-n', '2', '-a', '-m', '/scratch/211409755.tmpdir/tmpyxdsytnb/rouge_conf.xml']' returned non-zero exit status 2.
+ROUGE scores: 
+Extracting target and hypothesis summaries ...
+Removing BPE ...
+Removing tokenization ...
+Running files2rouge ...
+Can't locate XML/Parser.pm in @INC (@INC contains: /cluster/home/lvander/.files2rouge /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 41.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 70.
+Compilation failed in require at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+Traceback (most recent call last):
+  File "/cluster/work/cotterell/liam/fair_env/bin/files2rouge", line 11, in <module>
+    load_entry_point('files2rouge==2.1.0', 'console_scripts', 'files2rouge')()
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 131, in main
+    run(args.summary,
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 92, in run
+    output = r.convert_and_evaluate(rouge_args=rouge_args_str)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 368, in convert_and_evaluate
+    rouge_output = self.evaluate(system_id, rouge_args)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 343, in evaluate
+    rouge_output = check_output(command, env=env).decode("UTF-8")
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl', '-e', '/cluster/home/lvander/.files2rouge/data', '-c', '95', '-r', '1000', '-n', '2', '-a', '-m', '/scratch/211409755.tmpdir/tmp12cbd1f2/rouge_conf.xml']' returned non-zero exit status 2.
+ROUGE scores: 
+Extracting target and hypothesis summaries ...
+Removing BPE ...
+Removing tokenization ...
+Running files2rouge ...
+Can't locate XML/Parser.pm in @INC (@INC contains: /cluster/home/lvander/.files2rouge /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 41.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 70.
+Compilation failed in require at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+Traceback (most recent call last):
+  File "/cluster/work/cotterell/liam/fair_env/bin/files2rouge", line 11, in <module>
+    load_entry_point('files2rouge==2.1.0', 'console_scripts', 'files2rouge')()
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 131, in main
+    run(args.summary,
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 92, in run
+    output = r.convert_and_evaluate(rouge_args=rouge_args_str)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 368, in convert_and_evaluate
+    rouge_output = self.evaluate(system_id, rouge_args)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 343, in evaluate
+    rouge_output = check_output(command, env=env).decode("UTF-8")
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl', '-e', '/cluster/home/lvander/.files2rouge/data', '-c', '95', '-r', '1000', '-n', '2', '-a', '-m', '/scratch/211409755.tmpdir/tmp8nks397e/rouge_conf.xml']' returned non-zero exit status 2.
+ROUGE scores: 
+Extracting target and hypothesis summaries ...
+Removing BPE ...
+Removing tokenization ...
+Running files2rouge ...
+Can't locate XML/Parser.pm in @INC (@INC contains: /cluster/home/lvander/.files2rouge /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5 .) at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 41.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/XML/DOM.pm line 70.
+Compilation failed in require at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+BEGIN failed--compilation aborted at /cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl line 177.
+Traceback (most recent call last):
+  File "/cluster/work/cotterell/liam/fair_env/bin/files2rouge", line 11, in <module>
+    load_entry_point('files2rouge==2.1.0', 'console_scripts', 'files2rouge')()
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 131, in main
+    run(args.summary,
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/files2rouge-2.1.0-py3.8.egg/files2rouge/files2rouge.py", line 92, in run
+    output = r.convert_and_evaluate(rouge_args=rouge_args_str)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 368, in convert_and_evaluate
+    rouge_output = self.evaluate(system_id, rouge_args)
+  File "/cluster/work/cotterell/liam/fair_env/lib64/python3.8/site-packages/pyrouge/Rouge155.py", line 343, in evaluate
+    rouge_output = check_output(command, env=env).decode("UTF-8")
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 411, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/cluster/apps/nss/gcc-6.3.0/python/3.8.5/x86_64/lib64/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/cluster/home/lvander/.files2rouge/ROUGE-1.5.5.pl', '-e', '/cluster/home/lvander/.files2rouge/data', '-c', '95', '-r', '1000', '-n', '2', '-a', '-m', '/scratch/211409755.tmpdir/tmppoo1ozwq/rouge_conf.xml']' returned non-zero exit status 2.
+ROUGE scores: 
+Lambda = 9.7656E-04
+Lambda = 1.9531E-03
+Lambda = 3.9062E-03
+Lambda = 7.8125E-03
+Lambda = 1.5625E-02
+Lambda = 3.1250E-02
+Lambda = 6.2500E-02
+Lambda = 1.2500E-01
+Lambda = 2.5000E-01
+Lambda = 5.0000E-01
