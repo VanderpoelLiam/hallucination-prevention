@@ -1,5 +1,5 @@
 # Investigating the causes for and prevention of hallucinations in abstractive summarization
-This is the public version of the accompanying code for my masters thesis at ETH. The project is ongoing and will be completed by August 2022. This project required using the Euler cluster at ETH for its computing power. See [Getting started with clusters](https://scicomp.ethz.ch/wiki/Getting_started_with_clusters) for an introduction to clusters at ETH.
+This is the public version of the accompanying code for my masters thesis at ETH. The project is ongoing and will be completed by August 2022. This project requires using the Euler cluster at ETH for its computing power. See [Getting started with clusters](https://scicomp.ethz.ch/wiki/Getting_started_with_clusters) for an introduction to clusters at ETH.
 
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
